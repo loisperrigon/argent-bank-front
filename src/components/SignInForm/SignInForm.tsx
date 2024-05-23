@@ -18,7 +18,8 @@ const SignInForm: React.FC = () => {
       dispatch(
         setCredentials({
           email: email,
-          userFirstname: userData.body.userFirstname,
+          userFirstName: userData.body.userFirstName,
+          userLastName: userData.body.userLastName,
           token: userData.body.token,
         })
       );

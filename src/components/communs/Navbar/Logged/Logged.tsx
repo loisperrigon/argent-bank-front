@@ -3,7 +3,7 @@ import { logout } from "../../../../features/auth/auth";
 import { RootState } from "../../../../store";
 
 export default function Logged() {
-  const username = useSelector((state: RootState) => state.auth.userFirstname);
+  const username = useSelector((state: RootState) => state.auth.userFirstName);
   const dispatch = useDispatch();
 
   return (

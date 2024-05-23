@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
+import EditUser from "../../EditUser/EditUser";
 import "./Header";
 
 interface HeaderProps {
@@ -6,6 +7,11 @@ interface HeaderProps {
 }
 
 const Header: React.FC<HeaderProps> = ({ name }) => {
+  const [isEdit, setIsEdit] = useState(false);
+
+  function handleEdit() {
+    setIsEdit(!isEdit);
+  }
   return (
     <div className="header">
       <h1>
@@ -13,7 +19,13 @@ const Header: React.FC<HeaderProps> = ({ name }) => {
         <br />
         {name}!
       </h1>
-      <button className="edit-button">Edit Name</button>
+      {isEdit ? (
+        <EditUser handleEdit={handleEdit} />
+      ) : (
+        <button className="edit-button" onClick={handleEdit}>
+          Edit Name
+        </button>
+      )}
     </div>
   );
 };

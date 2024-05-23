@@ -7,7 +7,7 @@ import "./AccountUser";
 import Header from "./Header/Header";
 
 const MainContent: React.FC = () => {
-  const username = useSelector((state: RootState) => state.auth.userFirstname);
+  const username = useSelector((state: RootState) => state.auth.userFirstName);
   return (
     <main className="main bg-dark">
       <Header name={username} />

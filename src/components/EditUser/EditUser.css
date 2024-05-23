@@ -1,0 +1,26 @@
+.form-editUser {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.form-editUser-inputs {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.form-editUser-button {
+  width: 100px;
+  border-color: #00bc77;
+  background-color: #00bc77;
+  color: #fff;
+  font-weight: bold;
+  padding: 10px;
+}
+
+.form-editUser-buttons {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
